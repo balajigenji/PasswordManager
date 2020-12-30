@@ -1,0 +1,41 @@
+
+
+
+ STEP 1 -Query to create database
+
+ CREATE DATABASE test;
+
+ \c test;
+
+ STEP 2- Creating a table
+
+ CREATE TABLE water_pollution2(State_Name varchar,District_Name varchar,Block_Name varchar,Panchayat_Name varchar,Village_Name varchar,
+ Quality_Parameter varchar,Year date);
+ STEP 3- copying\loading a dataset to database
+
+ \copy Water_pollution2 from 'C:\Users\user\Desktop\Water_pollution2.csv' DELIMITER ',' HEADER CSV;
+
+ STEP 4- Viewing your data
+
+ select * FROM water_pollution2;
+
+ STEP 5 = Sorting dataset
+
+ select * FROM water_pollution2 LIMIT 10;
+ select * FROM water_pollution2 ORDER BY state_name;
+ select DISTINCT state_name,quality_parameter FROM water_pollution2;
+
+
+
+
+
+
+METABASE
+
+
+STEP 1- OPEN CMD AND TYPE
+java -jar metabase.jar
+
+
+
+
